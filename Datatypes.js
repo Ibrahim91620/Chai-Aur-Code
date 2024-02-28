@@ -11,7 +11,7 @@
 //let x;
 // null: it represent of empty type value, it is special type and it is object type :
 //
-const score=100;
+const score=100;;;
 const ScoreValue=100.3
 
 const isLoggedIn =false
