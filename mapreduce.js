@@ -42,6 +42,6 @@ const newNums=mynumber.map((num)=> num*5)
          const total= ShoppingCart.reduce((acc,item)=>item.price+acc,0);
    console.log(total);
 
-   
+   console.log("ibrahim")
 
           
