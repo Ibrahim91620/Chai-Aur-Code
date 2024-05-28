@@ -18,5 +18,30 @@ const newNums=mynumber.map((num)=> num*5)
 
         //  console.log(total);
 
-          const myTotal=nums.reduce((currValue,acc)=>currValue+acc,0);//arrow function
-          console.log(myTotal);
+          // const myTotal=nums.reduce((currValue,acc)=>currValue+acc,0);//arrow function
+          // console.log(myTotal);
+
+          const ShoppingCart=[
+            {
+              Course: "mobile course",
+              price: 5999
+
+            },
+            {
+              Course: "web dev Course",
+              price: 2999
+
+            },
+            {
+              Course: "Social media Marketing Course",
+              price: 999
+
+            },
+          ]
+
+         const total= ShoppingCart.reduce((acc,item)=>item.price+acc,0);
+   console.log(total);
+
+   
+
+          
