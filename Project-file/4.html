@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Listener</title>
+</head>
+<body>
+
+    <h1>Different images for perfroming different actions</h1>
+    <div id="images">
+
+        <ul>
+            <li>
+                <img width="200px" src="faizi.jpg" id="faizi"> 
+                
+            </li>
+              
+            <li>
+                <img width="200px" src="dp.jpg" id="google">  
+            </li>
+        </ul>
+  
+</div>
+</body>
+<script>
+    // document.getElementById('faizi').onclick=function(){
+    //     alert("clicked by me")
+    // }
+    document.getE
+    lementById('faizi').addEventListener('click',function(e){
+        console.log("click on img") 
+        e.stopPropagation()  //it does not propagte toward ul outside
+
+    },false)
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log("click on bg") //bubbling up
+
+    },false)
+
+
+    //capturing goes from top to bottom
+</script>
+</html>
