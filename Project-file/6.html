@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Changing</title>
+    <style>
+   #start{
+    width: 100px;
+    height: 30px;
+   }
+   #stop{
+    width: 100px;
+    height: 30px;
+   }
+  
+
+    </style>
+</head>
+<body>
+
+    <h1>Colour changing Project every second random Colour</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    
+</body>
+<script>
+    const randomColor= function(){
+        const hex='0123456789ABCDEF';
+        let color='#';
+        for(let i=0; i<6; i++){
+            color=color+hex[Math.floor(Math.random()*16)];
+        }
+        return color;
+    };
+     let t;
+
+    const startchangingColor=function(){
+        if(!t){
+         t=setInterval(colorchanging,1000);
+        }
+      function colorchanging(){
+        document.body.style.backgroundColor=randomColor();
+        
+
+      }
+
+
+    };
+   
+    
+    const stopchangingColor=function(){
+        
+       clearInterval(t)
+       t=null;
+    };
+
+    document.querySelector('#start').addEventListener('click',startchangingColor);
+    document.querySelector('#stop').addEventListener('click',stopchangingColor);
+
+
+
+</script>
+</html>

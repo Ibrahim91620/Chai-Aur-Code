@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key value </title>
+    <style>
+        h1{
+            color: blue;
+        }
+        body{
+    
+        }
+        table{
+            border: 1px solid black;
+           text-align: center;
+            
+        }
+        table tr td{
+            border: 2px solid black;
+            
+        }
+        #h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="insert">
+    <h1 id="h1">click on keyboard to show the value of key value</h1>
+</div>
+
+    
+</body>
+<script>
+ const insert= document.getElementById('insert')
+ window.addEventListener('keydown',(e)=>{
+    
+    insert.innerHTML=`
+    <div class="color">
+        <table>
+  <tr>
+    <th>key</th>
+    <th>keyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <th>${e.key ===''?'space':e.key}</th>
+    <th>${e.keyCode}</th>
+    <th>${e.code}</th>
+  </tr>
+  
+  
+</table>
+
+ </div>`
+
+ })
+    
+</script>
+</html>
